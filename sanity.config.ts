@@ -1,3 +1,4 @@
+import {unsplashImageAsset} from 'sanity-plugin-asset-source-unsplash'
 import {defineConfig} from 'sanity'
 import {deskTool} from 'sanity/desk'
 import {visionTool} from '@sanity/vision'
@@ -10,7 +11,7 @@ export default defineConfig({
   projectId: 'gm704fzt',
   dataset: 'production',
 
-  plugins: [deskTool(), visionTool()],
+  plugins: [deskTool(), visionTool(), unsplashImageAsset()],
 
   schema: {
     types: schemaTypes,
